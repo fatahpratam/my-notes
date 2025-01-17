@@ -77,6 +77,10 @@ body {
   filter: brightness(125%);
 }
 
+.main__h2 {
+  text-align: left;
+}
+
 .main__p {
   width: calc(100%);
   text-align: left;
