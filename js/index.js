@@ -39,7 +39,7 @@ function renderNotes(notes) {
     });
   }
 }
-window.addEventListener('pageshow', renderNotes(notes));
+window.addEventListener('DOMContentLoaded', renderNotes(notes));
 
 function handleAddButton() {
   document.querySelector('#add-button').addEventListener('click', () => {

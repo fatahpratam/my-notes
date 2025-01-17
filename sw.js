@@ -53,7 +53,10 @@ const assets = [
   './img/icons/apple-splash-828-1792.jpg',
   './img/icons/manifest-icon-192.maskable.png',
   './img/icons/manifest-icon-512.maskable.png',
-  './img/favicon.png'
+  './img/favicon.png',
+  './sw.js',
+  'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap',
+  'https://fonts.gstatic.com/s/roboto/v47/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
 ];
 
 self.addEventListener('install', e => {
@@ -67,7 +70,7 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('fetch', e => {
-  console.log('fetch event', e.request);
+  // console.log('fetch event', e.request);
   e.respondWith(
     e.request.url.includes('./edit.html')
       ? caches.match('./edit.html').then(cacheRes => {
