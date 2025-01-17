@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator)
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('./sw.js');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
@@ -9,7 +9,7 @@ function getId() {
 
 function handleBackButton() {
   document.querySelector('#back-button').addEventListener('click', () => {
-    location.href = '/index.html';
+    location.href = './index.html';
   });
 }
 handleBackButton();
@@ -18,7 +18,7 @@ function handleDeleteButton() {
   document.querySelector('#delete-button').addEventListener('click', () => {
     notes = notes.filter(note => note.id !== getId());
     localStorage.setItem('notes', JSON.stringify(notes));
-    location.href = '/index.html';
+    location.href = './index.html';
   });
 }
 handleDeleteButton();

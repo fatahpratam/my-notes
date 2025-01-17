@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator)
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('./sw.js');
 
 const notes = JSON.parse(localStorage.getItem('notes')) || [];
 
@@ -29,7 +29,7 @@ function renderNotes(notes) {
       p.innerText = note.content.length === 0 ? 'Empty' : note.content;
 
       button.addEventListener('click', () => {
-        location.href = `/edit.html?id=${note.id}`
+        location.href = `./edit.html?id=${note.id}`
       });
 
       button.append(h2);
@@ -39,7 +39,7 @@ function renderNotes(notes) {
     });
   }
 }
-renderNotes(notes);
+window.addEventListener('pageshow', renderNotes(notes));
 
 function handleAddButton() {
   document.querySelector('#add-button').addEventListener('click', () => {
@@ -50,7 +50,7 @@ function handleAddButton() {
       content: ''
     });
     localStorage.setItem('notes', JSON.stringify(notes));
-    location.href = `/edit.html?id=${newId}`;
+    location.href = `./edit.html?id=${newId}`;
   });
 }
 handleAddButton();
