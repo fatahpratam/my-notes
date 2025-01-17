@@ -54,25 +54,23 @@ const assets = [
   './img/icons/manifest-icon-192.maskable.png',
   './img/icons/manifest-icon-512.maskable.png',
   './img/favicon.png',
-  './sw.js',
   'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap',
   'https://fonts.gstatic.com/s/roboto/v47/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
 ];
 
 self.addEventListener('install', e => {
   // console.log('Service worker has been installed.');
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      // console.log('Caching shell assets');
-      cache.addAll(assets);
-    })
-  );
+  const handleInstall = async () => {
+    const cache = await caches.open(cacheName);
+    await cache.addAll(assets);
+  }
+  e.waitUntil(handleInstall());
 });
 
 self.addEventListener('fetch', e => {
-  // console.log('fetch event', e.request);
+  // console.log('fetch event', e.request.url);
   e.respondWith(
-    e.request.url.includes('./edit.html')
+    e.request.url.includes('/edit.html')
       ? caches.match('./edit.html').then(cacheRes => {
         return cacheRes;
       })
