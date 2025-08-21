@@ -1,4 +1,7 @@
+// Nama dari cache yang digunakan.
 const cacheName = 'site-static';
+
+// Daftar file yang akan di-cache.
 const assets = [
   './',
   './index.html',
@@ -62,6 +65,7 @@ const assets = [
   'https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
 ];
 
+// Ketika berhasil menginstall service worker, maka akan mulai men-cache semua file yang terdaftar di variabel assets sebelumnya.
 self.addEventListener('install', e => {
   // console.log('Service worker has been installed.');
   const handleInstall = async () => {
@@ -71,6 +75,7 @@ self.addEventListener('install', e => {
   e.waitUntil(handleInstall());
 });
 
+// Service worker dapat mendengar semua event fetch sehingga jika url request terdaftar di cache, maka cukup mengembalikan dengan data dari cache. Jika tidak terdaftar di cache, maka diperbolehkan untuk melakukan fetching.
 self.addEventListener('fetch', e => {
   // console.log('fetch event', e.request.url);
   e.respondWith(

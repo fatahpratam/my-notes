@@ -2,14 +2,25 @@
 <html lang="en">
 
 <head>
+  <!-- Tag meta ini menentukan encoding karakter yang digunakan halaman ini. -->
   <meta charset="UTF-8">
+
+  <!-- Tag meta ini diperlukan untuk mengaktifkan responsive web design. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tag title ini mewakili judul halaman. -->
   <title>My Notes</title>
+
+  <!-- Tag link ini digunakan untuk menghubungkan file css ke dokumen ini. -->
   <link rel="stylesheet" href="./css/edit.css">
+
+  <!-- Tag link ini digunakan untuk menghubungkan file manifeset ke dokumen ini. -->
   <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- Tag link ini digunakan untuk menghubungkan file icon ke dokumen ini. -->
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
-  <!-- IOS Support -->
+  <!-- Berikut adalah berbagai tag meta dan link yang diperlukan untuk mendukung PWA pada perangkat iOS. -->
   <link rel="apple-touch-icon" href="./img/icons/apple-icon-180.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#c0c1ff">
@@ -92,6 +103,7 @@
 </head>
 
 <body>
+  <!-- Tag header ini mewakili tombol kembali dan tombol 🗑 dari halaman ini. -->
   <header class="header">
     <button class="header__button" id="back-button">
       <img src="./img/arrow_back.png" alt="Arrow back" class="header__img">
@@ -100,12 +112,16 @@
       <img src="./img/delete.png" alt="Delete" class="header__img">
     </button>
   </header>
+
+  <!-- Tag main ini berisi dua input box untuk memasukkan judul notes dan konten notes. -->
   <main class="main">
     <form class="main__form">
       <input type="text" class="main__title-input" placeholder="Title" id="title">
       <textarea class="main__content-input" placeholder="Content" id="content"></textarea>
     </form>
   </main>
+
+  <!-- Tag script ini digunakan untuk menghubungkan file javascript ke dokumen ini. -->
   <script src="./js/edit.js"></script>
 </body>
 

@@ -1,7 +1,12 @@
+/* Mengimpor font Roboto dari Google API */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+/* Mengimpor daftar variabel warna-warna. */
 @import url('./dark.css');
 
-/* || RESET */
+/* || RESET 
+   Bagian ini digunakan untuk men-reset style-style yang diberikan secara default oleh user agent stylesheet.
+*/
 * {
   margin: 0;
   padding: 0;
@@ -16,13 +21,16 @@ img {
   display: block;
 }
 
-/* || GENERAL STYLES */
+/* || GENERAL STYLES 
+   Bagian ini berisi style-style umum yang tidak menggunakan CSS selector jenis kelas.
+*/
 html {
   font-family: 'Roboto', sans-serif;
   color: var(--color-on-surface);
   background-color: var(--color-surface);
 }
 
+/* Karena sudah menggunakan fungsi CSS min(), penggunaan @media tidak diperlukan untuk membuat halaman responsif. */
 body {
   min-height: 100vh;
   width: min(40rem, 100%);
@@ -34,7 +42,9 @@ body {
   position: relative;
 }
 
-/* || HEADER */
+/* || HEADER 
+   Bagian ini digunakan untuk men-style bagian header dari halaman.
+*/
 .header {
   display: flex;
   flex-direction: column;
@@ -47,7 +57,9 @@ body {
   text-shadow: 0px 0px 0.5rem var(--color-shadow);
 }
 
-/* || MAIN */
+/* || MAIN 
+   Bagian ini digunakan untuk men-style bagian main dari halaman.
+*/
 .main {
   flex-grow: 1;
 }
@@ -96,7 +108,9 @@ body {
   text-align: center;
 }
 
-/* || CONTAINER */
+/* || CONTAINER 
+   Bagian ini digunakan untuk men-style tombol "+".
+*/
 .container {
   z-index: 1;
   position: sticky;

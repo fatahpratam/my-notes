@@ -1,8 +1,11 @@
+// Fungsi if ini digunakan untuk mengecek apakah serviceWorker telah didukung oleh browser client. Jika Ya, maka akan melanjutkan untuk menginstall service worker.
 if ('serviceWorker' in navigator)
   navigator.serviceWorker.register('./sw.js');
 
+// Mengambil dan menyimpan daftar notes dari localStorage. Jika localStorage kosong, maka akan membuat daftar kosong baru.
 const notes = JSON.parse(localStorage.getItem('notes')) || [];
 
+// Fungsi ini digunakan untuk menampilkan daftar notes ke halaman utama ketika dipanggil.
 function renderNotes(notes) {
   const ul = document.querySelector('#list');
 
@@ -39,8 +42,10 @@ function renderNotes(notes) {
     });
   }
 }
+// Setelah semua konten DOM dimuat, maka fungsi renderNotes ini baru dijalankan.
 window.addEventListener('DOMContentLoaded', renderNotes(notes));
 
+// Fungsi ini digunakan untuk menambahkan fungsionalitas ke tombol "+". Setelah tombol "+" ditekan, maka program akan membuat notes baru dan mengarahkan pengguna ke halaman edit.
 function handleAddButton() {
   document.querySelector('#add-button').addEventListener('click', () => {
     const newId = Date.now().toString()

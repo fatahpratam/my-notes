@@ -2,14 +2,25 @@
 <html lang="en">
 
 <head>
+  <!-- Tag meta ini menentukan encoding karakter yang akan digunakan halaman ini. -->
   <meta charset="UTF-8">
+
+  <!-- Tag meta ini diperlukan untuk mengaktifkan responsive web design. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tag title ini mewakili judul halaman. -->
   <title>My Notes</title>
+
+  <!-- Tag link ini digunakan untuk menghubungkan file css ke dokumen ini. -->
   <link rel="stylesheet" href="./css/index.css">
+
+  <!-- Tag link ini digunakan untuk menghubungkan file manifeset ke dokumen ini. -->
   <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- Tag link ini digunakan untuk menghubungkan file icon ke dokumen ini. -->
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
-  <!-- IOS Support -->
+  <!-- Berikut adalah berbagai tag meta dan link yang diperlukan untuk mendukung PWA pada perangkat iOS. -->
   <link rel="apple-touch-icon" href="./img/icons/apple-icon-180.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#c0c1ff">
@@ -92,18 +103,25 @@
 </head>
 
 <body>
+  <!-- Tag header ini mewakili judul "My Notes" pada halaman ini. -->
   <header class="header">
     <h1 class="header__h1">My Notes</h1>
   </header>
+
+  <!-- Tag main ini berisi daftar notes yang sudah dibuat. -->
   <main class="main">
     <ul class="main__ul" id="list">
     </ul>
   </main>
+
+  <!-- Tag div ini mewaki tombol "+" yang digunakan untuk membuat notes baru. -->
   <div class="container">
     <button class="container__button" id="add-button">
       <img src="./img/add.png" alt="Add" class="container__img">
     </button>
   </div>
+
+  <!-- Tag script ini digunakan untuk menghubungkan file javascript ke dokumen ini. -->
   <script src="./js/index.js"></script>
 </body>
 
