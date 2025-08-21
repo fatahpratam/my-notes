@@ -3,7 +3,7 @@ const assets = [
   './',
   './index.html',
   './edit.html',
-  './manifest.json',
+  './manifest.webmanifest',
   './js/edit.js',
   './js/index.js',
   './css/dark.css',
@@ -55,7 +55,7 @@ const assets = [
   './img/icons/manifest-icon-512.maskable.png',
   './img/favicon.png',
   'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap',
-  'https://fonts.gstatic.com/s/roboto/v47/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
+  'https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
 ];
 
 self.addEventListener('install', e => {
