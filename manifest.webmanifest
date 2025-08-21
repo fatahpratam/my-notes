@@ -1,6 +1,7 @@
 {
   "name": "My Notes",
   "short_name": "My Notes",
+  "description": "My Notes adalah aplikasi web sederhana untuk membuat, mengelola, dan mengakses catatan digital pribadi.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#131318",
@@ -30,6 +31,32 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./img/screenshots/screenshot1.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./img/screenshots/screenshot2.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./img/screenshots/screenshot3.jpg",
+      "type": "image/jpeg",
+      "sizes": "1080x2340",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/screenshot4.jpg",
+      "type": "image/jpeg",
+      "sizes": "1080x2340",
+      "form_factor": "narrow"
     }
   ]
 }

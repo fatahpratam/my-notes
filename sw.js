@@ -54,6 +54,10 @@ const assets = [
   './img/icons/manifest-icon-192.maskable.png',
   './img/icons/manifest-icon-512.maskable.png',
   './img/favicon.png',
+  './img/screenshots/screenshot1.png',
+  './img/screenshots/screenshot2.png',
+  './img/screenshots/screenshot3.jpg',
+  './img/screenshots/screenshot4.jpg',
   'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap',
   'https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2'
 ];
